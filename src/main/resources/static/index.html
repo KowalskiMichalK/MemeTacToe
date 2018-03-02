@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RED and BLUE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+  </head>
+  <body onload="onload()">
+
+    <div id="dark_space" class="dark_space hidden_element">
+        <div id="creation_space" class="creation_space">
+          <form id="form1" name="f" action="/login" method="POST">
+            <h1>Register</h1>
+            <input type="text" name = "username" placeholder="username">
+            <input type="text" name = "password" placeholder="password">
+            <input name = "submit" onclick="register()" type ="button"value="Register">
+            <input name = "submit" onclick="login()" type ="button"value="Log In">
+          </form>
+        </div>
+      </div>
+
+
+    <div>
+    <div id="header">
+      <div id="trollface"></div>
+      <div class="h1">MEME - TAC - TOE</div>
+
+      <button id="log_or_register" onclick="LorR()">Log In or Register</button>
+      <button id="logOut" class="hidden_element" onclick="logOut()">Log Out</button>
+      <div id="hello" class="hidden_element" ></div>
+
+    </div>
+    <div id="main">
+      <div id="board">
+        <div class="tile" onclick="tileclick(this)"></div>
+        <div class="tile" onclick="tileclick(this)"></div>
+        <div class="tile" onclick="tileclick(this)"></div>
+        <div class="tile" onclick="tileclick(this)"></div>
+        <div class="tile" onclick="tileclick(this)"></div>
+        <div class="tile" onclick="tileclick(this)"></div>
+        <div class="tile" onclick="tileclick(this)"></div>
+        <div class="tile" onclick="tileclick(this)"></div>
+        <div class="tile" onclick="tileclick(this)"></div>
+
+        <div class="button" onclick="start2PlayerGame()">2 player</div>
+        <div class="button" onclick="startAIGame()">play vs ai</div>
+        <div class="button" onclick="SirPick()">I'm a sir</div>
+        <div class="button" onclick="BossPick()">I'm a boss</div>
+        <div class="button" >I indicate</div>
+        <div class="button" onclick="resetgame()">reset game</div>
+      </div>
+    <div id="history" class="hidden_element">
+      <h2> game History</h2>
+      <ul id="gamelist"></ul>
+    </div>>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

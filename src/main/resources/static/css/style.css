@@ -1,0 +1,215 @@
+html, body {
+  padding: 0;
+  margin: 0;
+
+
+  background: #111;
+  text-transform: uppercase;
+  color: #111;
+  font-size: 1.5vh;
+  font: sans-serif;
+}
+#log_in{
+  float: right;
+  margin-right:  5vh;
+  margin-top: 2.5vh;
+  height: 5vh;
+}
+
+#hello{
+  font-size: 5vh;
+  float: right;
+  margin-right:  10vh;
+  margin-top: 2.5vh;
+  height: 5vh;
+}
+#logOut {
+  float: right;
+  margin-right: 5vh;
+  margin-top: 2.5vh;
+  height: 5vh;
+}
+#log_or_register{
+  float: right;
+  margin-right:  5vh;
+  margin-top: 2.5vh;
+  height: 5vh;
+}
+#trollface{
+  background: url("trollface.jpg");
+  background-size: contain;
+  height: 10vh;
+    width: 10vh;
+    float: left;
+
+}
+#header{
+  background: #fff;
+  margin: 0px;
+  height: 10vh;;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width:100% ;
+  z-index: 99;
+  /*
+  align-content: center;
+  border: solid black;
+  float: right;
+  display: block;
+*/
+}
+#trollface{
+  margin-left: 3vh;
+  margin-right: 3vh;
+  background: url("trollface.jpg");
+  background-size: contain;
+  height: 10vh;
+    width: 10vh;
+
+}
+.h1{
+  padding-left:  3vh;
+  font: Arial;
+  margin: 0;
+  height: 10vh;
+  width: auto;
+  line-height: 10vh;
+  background: #fff;
+  font-weight: bold;
+  font-size: 4vh;
+  text-align: center;
+  float: left;
+}
+#main{
+  background: url("wallpaper.jpg") repeat-x;
+  background-size: cover;
+  background-position: right bottom;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 15vh;
+  border: solid black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+#history{
+  width: 40vh;
+  height: 60vh;
+  position: absolute;
+  left: 106vh;
+  border: dashed;
+  border-color: aqua;
+  color: white;
+  font-size: 3vh;
+  overflow-x: scroll;
+}
+
+#board{
+
+  padding: 0;
+  margin:0;
+  width: 66vh;
+  height: 78vh;
+  position: absolute;
+  left: 30vh;
+
+}
+.tile{
+  padding: 0;
+  margin: 1vh;
+
+  height: 20vh;
+  width: 20vh;
+
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  float: left;
+
+  background-size: contain;
+
+
+}
+.button{
+  padding: 0;
+  margin: 1vh;
+  height: 10vh;
+  width: 31vh;
+  line-height: 10vh;
+  background: #fff;
+  font-weight: bold;
+  font-size: 4vh;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  float: left;
+  opacity: 1;
+  display: none;
+}
+/* register */
+
+.dark_space {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: 100;
+}
+
+.hidden_element {
+  display: none;
+}
+
+h1{
+  text-align: center;
+  color: #fff;
+  font-size: 3vh;
+}
+input{
+  width: 100%;
+  font-size: 3vh;
+}
+#form1{
+  width: 20 vh;
+}
+.creation_space {
+
+
+  background: #3e3d3d;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction:column;
+  box-sizing: border-box;
+  padding: 5vh;
+transform: translate(-50%, -50%);
+
+}
+
+.creation_subtitles {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  flex-grow: 1;
+}
+
+.creation_inputs {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  flex-grow: 2;
+}
+
+
+#logfield{
+  height: 10vh;
+  width: 50vh;
+  float: right;
+  margin-right: 5vh;
+}
