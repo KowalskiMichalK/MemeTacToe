@@ -23,9 +23,9 @@ public class GameController {
     }
 
     @PostMapping("/user/games")
-    public void saveGame(@RequestBody Game game, Authentication authentication){
+    public Game saveGame(@RequestBody Game game, Authentication authentication){
         Long loggedUserId = ((User)authentication.getPrincipal()).getUserId();
         game.setUserId(loggedUserId);
-        gameService.saveGame(game);
+        return gameService.saveGame(game);
     }
 }

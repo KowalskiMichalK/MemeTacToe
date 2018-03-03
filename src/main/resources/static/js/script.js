@@ -112,9 +112,14 @@ function setTileMeme(index, whose){
   }
   if (checkWin(boardState, whose)) {
     if (whoseTurn === "Sir") {
+
       buttons[4].innerText="LIKE A SIR!";
+
     }else{
       buttons[4].innerText="LIKE A BOSS!";
+    }
+    if(loggedin) {
+        saveGame(whoseTurn, computer === null ? "2 Player G" : "AI G");
     }
     whoseTurn = null;
     return;
@@ -253,9 +258,10 @@ function register(){
         data: formData,
         success: function(){
             console.log('registered');
+            login();
         },
         error: function(){
-            alert('err post');
+            alert('err post register');
         }
 
     });
@@ -281,7 +287,7 @@ function refreshGameList(){
         url: '/user/games',
         success: function(games){
             $.each(games, function(i, game){
-                $gamelist.append('<li>Winner: '+ game.winner +', Game Type: '+ game.typeOfGame +', Date: '+ game.date +'</li>')
+                $gamelist.append('<li>Winner: '+ game.winner +', Game Type: '+ game.typeOfGame +', Date: '+ game.date +'</li>');
             });
         },
         error: function(){
@@ -298,12 +304,35 @@ function logOut(){
     $.ajax({
         type: 'GET',
         url: '/logout',
-        success: function(e){
+        success: function(){
+            $gamelist.empty();
+            resetgame()
             loggedin = false;
             console.log('logout success');
         },
         error: function(){
-            alert('err get user');
+            alert('err logout');
+        }
+    });
+}
+
+function saveGame(winner, type){
+    var game = {
+        winner: winner,
+        typeOfGame: type
+    };
+
+    $.ajax({
+        type: 'POST',
+        url: '/user/games',
+        contentType: 'application/json',
+        data: JSON.stringify(game),
+        success: function(savedgame){
+            $gamelist.append('<li>Winner: '+ savedgame.winner +', Game Type: '+ savedgame.typeOfGame +', Date: '+ savedgame.date +'</li>');
+            console.log('post game success');
+        },
+        error: function(){
+            alert('err post game');
         }
     });
 }
